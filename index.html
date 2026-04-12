@@ -8,23 +8,24 @@
 
 @page {
   size: A4;
-  margin: 18mm 18mm 16mm 18mm;
+  margin: 16mm 18mm 16mm 18mm;
 }
-/* 打印页眉：显示链接 */
+/* 打印页眉：仅打印时显示，屏幕不显示 */
 .print-header {
   display: none;
+  width: 100%;
   text-align: center;
   font-size: 10px;
   color: #8B6914;
   letter-spacing: 1px;
-  padding: 3px 0 2px 0;
+  padding: 2px 0;
   border-bottom: 1px solid #E8D48A;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-family: "Georgia", serif;
 }
 @media print {
   .print-header { display: block; }
-  body { padding-top: 0 !important; margin-top: 0 !important; }
+  @page { margin-top: 12mm; }
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
