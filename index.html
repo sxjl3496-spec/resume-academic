@@ -6,42 +6,199 @@
 <title>冯泽宇 - 学术简历</title>
 <style>
 
-@page { size: A4; margin: 15mm 18mm 15mm 18mm; }
+@page { size: A4; margin: 14mm 18mm 14mm 18mm; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: "Times New Roman", "Georgia", "SimSun", serif; font-size: 12px; line-height: 1.75; color: #1a1a1a; background: #fff; max-width: 210mm; margin: 0 auto; padding: 16mm 20mm; }
-.academic-header { text-align: center; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1.5px solid #333; }
-.academic-header h1 { font-size: 22px; font-weight: bold; letter-spacing: 4px; color: #000; margin-bottom: 6px; }
-.academic-header .header-meta { font-size: 11px; color: #444; }
-.academic-header .header-meta span { margin: 0 6px; }
+body {
+  font-family: "Georgia", "Times New Roman", "SimSun", serif;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background: #fff;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 14mm 20mm;
+}
+
+/* === 头部区域 === */
+.academic-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #1B3A6B;
+}
+.academic-header .photo-wrap {
+  flex-shrink: 0;
+  position: relative;
+}
+.academic-header .photo-wrap img {
+  width: 72px;
+  height: 90px;
+  object-fit: cover;
+  border: 2px solid #1B3A6B;
+  border-radius: 2px;
+}
+.academic-header .header-info {
+  flex: 1;
+  padding-top: 4px;
+}
+.academic-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0D2240;
+  letter-spacing: 5px;
+  margin-bottom: 8px;
+  font-family: "Georgia", "SimHei", sans-serif;
+}
+.academic-header .header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 14px;
+  font-size: 11px;
+  color: #444;
+}
+.academic-header .header-meta span {
+  position: relative;
+  padding-left: 10px;
+}
+.academic-header .header-meta span::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: #1B3A6B;
+  font-size: 7px;
+  top: 2px;
+}
+.academic-header .contact-line {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #555;
+}
+
+/* === 区块标题 === */
 .section { margin-bottom: 14px; }
-.section h2 { font-size: 13px; font-weight: bold; color: #fff; background: #2c3e50; padding: 4px 12px; letter-spacing: 1px; }
-.section .section-body { padding: 8px 12px 6px; border-left: 2px solid #2c3e50; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; background: #fdfdfd; }
-h3 { font-size: 12px; font-weight: bold; color: #2c3e50; margin: 8px 0 4px 0; padding-bottom: 2px; border-bottom: 1px solid #ccc; }
+.section h2 {
+  font-size: 12.5px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #1B3A6B 0%, #2A5298 100%);
+  padding: 5px 14px;
+  letter-spacing: 1.5px;
+  font-family: "Georgia", "SimHei", sans-serif;
+}
+
+/* === 区块内容 === */
+.section .section-body {
+  padding: 9px 14px 8px;
+  background: #fafbfd;
+  border-left: 3px solid #1B3A6B;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* === 次级标题 === */
+h3 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #1B3A6B;
+  margin: 9px 0 5px 0;
+  padding: 0 8px 2px 8px;
+  border-bottom: 1.5px solid #c5d0e8;
+  border-left: 3px solid #1B3A6B;
+  font-family: "Georgia", "SimHei", sans-serif;
+}
 h3:first-child { margin-top: 0; }
-table.md-table { width: 100%; border-collapse: collapse; font-size: 11.5px; margin: 6px 0; }
-table.md-table thead tr th { background: #ecf0f1; color: #2c3e50; font-weight: bold; padding: 5px 8px; text-align: left; border: 1px solid #bbb; }
-table.md-table tbody tr td { padding: 4px 8px; border: 1px solid #ddd; color: #1a1a1a; }
-table.md-table tbody tr:nth-child(even) td { background: #f7f9fa; }
+
+/* === 表格 === */
+table.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+  margin: 6px 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+table.md-table thead tr th {
+  background: linear-gradient(135deg, #1B3A6B, #2A5298);
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 9px;
+  text-align: left;
+  font-family: "Georgia", "SimHei", sans-serif;
+  letter-spacing: 0.5px;
+}
+table.md-table tbody tr td {
+  padding: 4px 9px;
+  border-bottom: 1px solid #e8edf5;
+  color: #1a1a1a;
+}
+table.md-table tbody tr:nth-child(even) td { background: #f0f4fb; }
+table.md-table tbody tr:hover td { background: #e5ebf6; }
+
+/* === 列表 === */
 ul.md-ul, ol.md-ol { padding-left: 20px; margin: 4px 0; }
-ul.md-ul li { list-style: disc; margin: 2px 0; color: #1a1a1a; }
-ol.md-ol li { margin: 2px 0; color: #1a1a1a; }
-li strong { color: #1a1a1a; }
+ul.md-ul li { list-style: none; position: relative; padding-left: 14px; margin: 2px 0; color: #1a1a1a; }
+ul.md-ul li::before { content: "▸"; position: absolute; left: 0; color: #1B3A6B; font-size: 9px; top: 3px; }
+ol.md-ol li { margin: 2px 0; color: #1a1a1a; list-style-position: outside; }
+li strong { color: #0D2240; font-weight: bold; }
 p.md-p { margin: 2px 0; color: #1a1a1a; }
-blockquote { border-left: 2px solid #2c3e50; padding: 4px 10px; color: #444; font-size: 11.5px; margin: 4px 0; background: #f5f7f8; }
-.course-tag { background: #ecf0f1; color: #2c3e50; padding: 1px 5px; border-radius: 2px; font-size: 10.5px; border: 1px solid #bdc3c7; }
-@media print { body { padding: 0; } .section .section-body { background: #fff; } }
+
+/* === 引用块 === */
+blockquote {
+  border-left: 3px solid #1B3A6B;
+  padding: 4px 10px;
+  color: #444;
+  font-size: 11.5px;
+  margin: 4px 0;
+  background: #eef2f9;
+  border-radius: 0 3px 3px 0;
+}
+
+/* === 课程标签 === */
+.course-tag {
+  background: #eef2f9;
+  color: #1B3A6B;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 10.5px;
+  border: 1px solid #c5d0e8;
+}
+
+/* === 论文标签 === */
+.tag-csscci { background: #d4edda; color: #155724; padding: 1px 4px; border-radius: 2px; font-size: 10px; margin-left: 4px; }
+.tag-sci { background: #d1ecf1; color: #0c5460; padding: 1px 4px; border-radius: 2px; font-size: 10px; margin-left: 4px; }
+
+/* === 分割线 === */
+hr { border: none; border-top: 1px solid #dde4ef; margin: 6px 0; }
+
+/* 学术会议奖项居右 */
+.section table.md-table tbody tr td:last-child { text-align: center; color: #1B3A6B; font-weight: bold; }
+
+@media print {
+  body { padding: 0; }
+  .section .section-body { background: #fff; }
+  table.md-table tbody tr:hover td { background: inherit; }
+  table.md-table tbody tr:nth-child(even) td { background: #f0f4fb; }
+}
 
 </style>
 </head>
 <body>
 <div class="academic-header">
-  <h1>冯泽宇</h1>
-  <div class="header-meta">
-    <span>籍贯：湖南湘潭</span>|
-    <span>中共党员</span>|
-    <span>西南财经大学 · 数理金融学博士</span>|
-    <span>18973253969</span>|
-    <span>sxjl3496@gmail.com</span>
+  <div class="photo-wrap">
+    <img src="photo.jpg" alt="照片">
+  </div>
+  <div class="header-info">
+    <h1>冯泽宇</h1>
+    <div class="header-meta">
+      <span>籍贯：湖南湘潭</span>
+      <span>中共党员</span>
+      <span>西南财经大学 · 数理金融学博士</span>
+    </div>
+    <div class="contact-line">
+      电话：18973253969 &nbsp;|&nbsp; 微信：sxjl3496 &nbsp;|&nbsp; 邮箱：sxjl3496@gmail.com
+    </div>
   </div>
 </div>
 
