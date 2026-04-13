@@ -6,175 +6,43 @@
 <title>冯泽宇 - 个人简历</title>
 <style>
 
-@page { size: A4; margin: 14mm 18mm 14mm 18mm; }
-/* no print header */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: "Georgia", "Times New Roman", "SimSun", serif;
-  font-size: 12px;
-  line-height: 1.7;
-  color: #1a1a1a;
-  background: #fff;
-  max-width: 210mm;
-  margin: 0 auto;
-  padding: 14mm 20mm;
-}
-
-/* === 头部：金色主调 === */
-.resume-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 16px;
-  padding-bottom: 14px;
-  border-bottom: 2px solid #8B6914;
-  background: linear-gradient(to bottom, #fffdf5 0%, #fff 100%);
-}
-.resume-header .photo {
-  width: 68px;
-  height: 88px;
-  object-fit: cover;
-  border: 2px solid #DAA520;
-  border-radius: 3px;
-  flex-shrink: 0;
-  box-shadow: 2px 2px 6px rgba(139,105,20,0.2);
-}
-.resume-header .header-info { flex: 1; }
-.resume-header h1 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #6B4C0A;
-  letter-spacing: 4px;
-  margin-bottom: 8px;
-  font-family: "Georgia", "SimHei", sans-serif;
-  text-shadow: 1px 1px 2px rgba(218,165,32,0.2);
-}
-.resume-header .basic-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px 10px;
-  font-size: 11px;
-  color: #555;
-  margin-bottom: 6px;
-}
-.resume-header .basic-info span { white-space: nowrap; }
-.info-tag {
-  background: linear-gradient(135deg, #FFF8E7, #FFF0C8);
-  color: #8B6914;
-  padding: 2px 8px;
-  border-radius: 3px;
-  border: 1px solid #DAA520;
-  font-size: 11px;
-  box-shadow: 0 1px 2px rgba(218,165,32,0.1);
-}
-.contact-info { font-size: 11px; color: #777; margin-top: 6px; }
-
-/* === 区块标题：深金褐色 === */
-.section { margin-bottom: 14px; }
-.section h2 {
-  font-size: 13px;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(90deg, #6B4C0A 0%, #B8860B 60%, #DAA520 100%);
-  padding: 5px 14px;
-  letter-spacing: 1.5px;
-  font-family: "Georgia", "SimHei", sans-serif;
-  border-radius: 3px 3px 0 0;
-  box-shadow: 0 2px 4px rgba(107,76,10,0.2);
-}
-
-/* === 区块内容 === */
-.section .section-body {
-  padding: 9px 14px 8px;
-  background: #fffef8;
-  border: 1px solid #E8D48A;
-  border-top: none;
-  border-radius: 0 0 3px 3px;
-}
-
-/* === 次级标题 === */
-h3 {
-  font-size: 12px;
-  font-weight: 700;
-  color: #8B6914;
-  margin: 9px 0 5px 0;
-  padding: 0 8px 2px 8px;
-  border-bottom: 1.5px solid #E8D48A;
-  border-left: 3px solid #DAA520;
-  font-family: "Georgia", "SimHei", sans-serif;
-}
-h3:first-child { margin-top: 0; }
-
-/* === 表格 === */
-table.md-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 11.5px;
-  margin: 6px 0;
-  border-radius: 4px;
-  overflow: hidden;
-}
-table.md-table thead tr th {
-  background: linear-gradient(135deg, #6B4C0A, #B8860B);
-  color: #fff;
-  font-weight: 600;
-  padding: 5px 9px;
-  text-align: left;
-  font-family: "Georgia", "SimHei", sans-serif;
-  letter-spacing: 0.5px;
-}
-table.md-table tbody tr td {
-  padding: 4px 9px;
-  border-bottom: 1px solid #f0e8c8;
-  color: #2a2a2a;
-}
-table.md-table tbody tr:nth-child(even) td { background: #FFFDF5; }
-table.md-table tbody tr:hover td { background: #FFF8E7; }
-
-/* === 列表 === */
-ul.md-ul, ol.md-ol { padding-left: 20px; margin: 4px 0; }
-ul.md-ul li { list-style: none; position: relative; padding-left: 14px; margin: 2px 0; color: #2a2a2a; }
-ul.md-ul li::before { content: "◆"; position: absolute; left: 0; color: #DAA520; font-size: 9px; top: 3px; }
-ol.md-ol li { margin: 2px 0; color: #2a2a2a; }
-li strong { color: #6B4C0A; font-weight: 700; }
-p.md-p { margin: 2px 0; color: #2a2a2a; }
-
-/* === 引用块 === */
-blockquote {
-  border-left: 3px solid #DAA520;
-  padding: 4px 10px;
-  color: #555;
-  font-size: 11.5px;
-  margin: 4px 0;
-  background: #FFFEF5;
-  border-radius: 0 3px 3px 0;
-}
-
-/* === 课程标签 === */
-.course-tag {
-  background: #FFF8E7;
-  color: #8B6914;
-  padding: 1px 6px;
-  border-radius: 3px;
-  font-size: 10.5px;
-  border: 1px solid #E8D48A;
-}
-
-/* === 论文标签 === */
-.tag-csscci { background: #FFF3CD; color: #856404; padding: 1px 5px; border-radius: 2px; font-size: 10px; margin-left: 4px; }
-.tag-sci { background: #D1ECF1; color: #0c5460; padding: 1px 5px; border-radius: 2px; font-size: 10px; margin-left: 4px; }
-
-/* === 分割线 === */
-hr { border: none; border-top: 1px solid #E8D48A; margin: 6px 0; }
-
-/* 学术会议奖项 */
-.section table.md-table tbody tr td:last-child { text-align: center; color: #8B6914; font-weight: 700; }
-
-@media print {
-  body { padding: 0; }
-  .section .section-body { background: #fff; }
-  table.md-table tbody tr:hover td { background: inherit; }
-}
+  @page { size: A4; margin: 15mm 18mm 15mm 18mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Lantinghei SC", sans-serif; font-size: 12px; line-height: 1.65; color: #2c2c2c; background: #fff; max-width: 210mm; margin: 0 auto; padding: 18mm 20mm; }
+  .resume-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 2px solid #1a73e8; }
+  .resume-header .photo { width: 68px; height: 88px; border-radius: 4px; object-fit: cover; border: 2px solid #e8eef8; flex-shrink: 0; }
+  .resume-header .header-info { flex: 1; }
+  .resume-header h1 { font-size: 24px; font-weight: 700; color: #1a1a2e; letter-spacing: 3px; margin-bottom: 8px; text-align: left; }
+  .resume-header .basic-info { display: flex; flex-wrap: wrap; gap: 5px 10px; font-size: 11px; color: #444; margin-bottom: 8px; }
+  .resume-header .basic-info span { white-space: nowrap; }
+  .info-tag { background: #e8f0ff; color: #1a56c4; padding: 2px 8px; border-radius: 3px; border: 1px solid #c2d7fa; font-size: 11px; }
+  .contact-info { font-size: 11px; color: #666; margin-top: 8px; }
+  .contact-info span { white-space: nowrap; }
+  .section { margin-bottom: 14px; }
+  .section h2 { font-size: 13px; font-weight: 700; color: #fff; background: linear-gradient(90deg, #1a73e8 0%, #4a9eff 100%); padding: 5px 10px; border-radius: 4px 4px 0 0; letter-spacing: 1px; }
+  .section .section-body { border: 1px solid #e0e7f0; border-top: none; border-radius: 0 0 6px 6px; padding: 10px 12px; background: #fafcff; }
+  h3 { font-size: 12px; font-weight: 700; color: #1a73e8; margin: 10px 0 6px 0; padding-bottom: 3px; border-bottom: 1px dashed #d0e2ff; }
+  h3:first-child { margin-top: 0; }
+  table.md-table { width: 100%; border-collapse: collapse; border-radius: 6px; overflow: hidden; font-size: 11.5px; margin: 8px 0; box-shadow: 0 1px 3px rgba(26,115,232,0.08); }
+  table.md-table thead tr th { background: linear-gradient(135deg, #1a73e8, #4285f4); color: #fff; font-weight: 600; padding: 7px 10px; text-align: left; font-size: 11.5px; }
+  table.md-table tbody tr:nth-child(even) { background: #f0f5ff; }
+  table.md-table tbody tr:nth-child(odd) { background: #fff; }
+  table.md-table tbody tr:hover { background: #e8f0ff; }
+  table.md-table td { padding: 5px 8px; border-bottom: 1px solid #e8eef5; color: #333; }
+  ul.md-ul, ol.md-ol { padding-left: 18px; margin: 5px 0; }
+  ul.md-ul li { list-style: none; position: relative; padding-left: 14px; margin: 3px 0; color: #333; }
+  ul.md-ul li::before { content: "\25b8"; position: absolute; left: 0; color: #1a73e8; font-size: 10px; top: 2px; }
+  ol.md-ol { padding-left: 20px; margin: 5px 0; }
+  ol.md-ol li { margin: 3px 0; color: #333; list-style-position: outside; }
+  li strong { color: #1a1a2e; }
+  p.md-p { margin: 3px 0; color: #333; }
+  blockquote { border-left: 3px solid #1a73e8; padding: 5px 12px; color: #444; font-size: 11.5px; margin: 6px 0; background: #e8f0ff; border-radius: 0 4px 4px 0; }
+  .paper-item { margin: 6px 0; padding: 5px 8px; background: #fff; border-left: 3px solid #1a73e8; border-radius: 0 4px 4px 0; font-size: 11.5px; }
+  .paper-item .journal { color: #666; font-style: italic; }
+  .paper-item .tag { display: inline-block; background: #e6f4ea; color: #1e7e34; padding: 1px 5px; border-radius: 2px; font-size: 10px; margin-left: 4px; }
+  .skill-item { display: flex; align-items: flex-start; gap: 6px; margin: 4px 0; font-size: 11.5px; }
+  .skill-dot { width: 5px; height: 5px; background: #1a73e8; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+  @media print { body { padding: 0; } .section .section-body { background: #fff; } table.md-table tbody tr:hover { background: inherit; } }
 
 </style>
 </head>
@@ -189,7 +57,7 @@ hr { border: none; border-top: 1px solid #E8D48A; margin: 6px 0; }
       <span class="info-tag">西南财经大学 · 数理金融学博士</span>
     </div>
     <div class="contact-info">
-      电话：18973253969 &nbsp;|&nbsp; 微信：sxjl3496 &nbsp;|&nbsp; 邮箱：sxjl3496@gmail.com
+      电话：18973253969 | 微信：sxjl3496 | 邮箱：sxjl3496@gmail.com
     </div>
   </div>
 </div>
